@@ -130,3 +130,14 @@ dmypy.json
 
 # PyCharm files
 .idea
+
+# Data directories and files
+*.pkl
+*.bin
+trained/
+trained/*.bin
+trained/*.pkl
+input/
+*.csv
+*.parquet
+*.npy
