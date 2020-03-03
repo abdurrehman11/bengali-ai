@@ -1,4 +1,4 @@
-import models
+from src import models
 
 MODEL_DISPATCHER = {
     'resnet34': models.ResNet34

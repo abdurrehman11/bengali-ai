@@ -4,12 +4,12 @@ import joblib
 from PIL import Image
 from albumentations import (Compose, Resize, Normalize, ShiftScaleRotate)
 import torch
+from src.BengaliConstants import BengaliConstants
 
 
 class BengaliDatasetTrain:
     def __init__(self, folds, img_height, img_width, mean, std):
-        df = pd.read_csv("C:/Users/anadeem01/PycharmProjects/Bengali_AI/input/bengaliai-cv19/train_folds.csv")
-
+        df = pd.read_csv(BengaliConstants.TRAIN_FOLDS_CSV_FILE)
         # df = pd.read_csv("../input/bengaliai-cv19/train_folds.csv")
         df = df[["image_id", "grapheme_root", "vowel_diacritic", "consonant_diacritic", "kfold"]]
 

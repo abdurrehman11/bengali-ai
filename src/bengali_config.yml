@@ -1,0 +1,25 @@
+model_config:
+  device: 'cpu'
+  epochs: 50
+  img_height: 137
+  img_width: 236
+  train_batch_size: 64
+  test_batch_size: 8
+  model_mean: (0.485, 0.456, 0.406)
+  model_std: (0.229, 0.224, 0.225)
+  folds: 5
+#  training_folds:
+#    train_folds_1: [0, 1, 2, 3]
+#    train_folds_2: [0, 1, 2, 4]
+#    train_folds_3: [0, 1, 4, 3]
+#    train_folds_4: [0, 2, 3, 4]
+#    train_folds_5: [1, 2, 3, 4]
+  training_folds: [[0, 1, 2, 3], [0, 1, 2, 4], [0, 1, 4, 3], [0, 2, 3, 4], [1, 2, 3, 4]]
+  validation_folds: [[4], [3], [2], [1], [0]]
+#  validation_folds:
+#    valid_fold_1: [4]
+#    valid_fold_2: [3]
+#    valid_fold_3: [2]
+#    valid_fold_4: [1]
+#    valid_fold_5: [0]
+  base_model: 'resnet34'
