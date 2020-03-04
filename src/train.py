@@ -74,7 +74,7 @@ def evaluate(dataset, data_loader, model):
         device = model_config[BengaliConstants.MODEL_CONFIG][BengaliConstants.DEVICE]
         image = image.to(device, dtype=torch.float)
         grapheme_root = grapheme_root.to(device, dtype=torch.long)
-        vowel_diacritic = vowel_diacritic.to(device, dtype=torch.logn)
+        vowel_diacritic = vowel_diacritic.to(device, dtype=torch.long)
         consonant_diacritic = consonant_diacritic.to(device, dtype=torch.long)
 
         outputs = model(image)
